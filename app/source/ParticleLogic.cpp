@@ -1,6 +1,7 @@
 #include "ParticleLogic.h"
-#include "ParticleCanvas.h"
+#include "core/ParticleCanvas.h"
 
+namespace ffass {
 void ParticleLogic::Sand(ParticleCanvas& canvas, int index, int x, int y)
 {
     auto& buffer = canvas.buffer_;
@@ -52,4 +53,5 @@ void ParticleLogic::Sand(ParticleCanvas& canvas, int index, int x, int y)
 
 void ParticleLogic::Water(ParticleCanvas& canvas, int index, int x, int y)
 {
+}
 }

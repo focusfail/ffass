@@ -65,6 +65,14 @@ build CMakeFiles/ffass.dir/app/source/ParticleLogic.cpp.obj: CXX_COMPILER__ffass
   OBJECT_DIR = CMakeFiles\ffass.dir
   OBJECT_FILE_DIR = CMakeFiles\ffass.dir\app\source
 
+build CMakeFiles/ffass.dir/app/source/core/ParticleCanvas.cpp.obj: CXX_COMPILER__ffass_unscanned_Debug C$:/code/ffass/app/source/core/ParticleCanvas.cpp || cmake_object_order_depends_target_ffass
+  DEFINES = -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP
+  DEP_FILE = CMakeFiles\ffass.dir\app\source\core\ParticleCanvas.cpp.obj.d
+  FLAGS = -g -std=gnu++20
+  INCLUDES = -IC:/code/ffass/app/include -IC:/code/ffass/dependencies/raylib/src -IC:/code/ffass/dependencies/raylib/src/external/glfw/include
+  OBJECT_DIR = CMakeFiles\ffass.dir
+  OBJECT_FILE_DIR = CMakeFiles\ffass.dir\app\source\core
+
 build CMakeFiles/ffass.dir/app/source/main.cpp.obj: CXX_COMPILER__ffass_unscanned_Debug C$:/code/ffass/app/source/main.cpp || cmake_object_order_depends_target_ffass
   DEFINES = -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP
   DEP_FILE = CMakeFiles\ffass.dir\app\source\main.cpp.obj.d
@@ -79,15 +87,15 @@ build CMakeFiles/ffass.dir/app/source/main.cpp.obj: CXX_COMPILER__ffass_unscanne
 
 
 #############################################
-# Link the executable C:\code\ffass\ffass.exe
+# Link the executable app\ffass.exe
 
-build C$:/code/ffass/ffass.exe: CXX_EXECUTABLE_LINKER__ffass_Debug CMakeFiles/ffass.dir/app/source/Brush.cpp.obj CMakeFiles/ffass.dir/app/source/ParticleLogic.cpp.obj CMakeFiles/ffass.dir/app/source/main.cpp.obj | dependencies/raylib/raylib/libraylib.a || dependencies/raylib/raylib/external/glfw/src/glfw dependencies/raylib/raylib/libraylib.a
+build app/ffass.exe: CXX_EXECUTABLE_LINKER__ffass_Debug CMakeFiles/ffass.dir/app/source/Brush.cpp.obj CMakeFiles/ffass.dir/app/source/ParticleLogic.cpp.obj CMakeFiles/ffass.dir/app/source/core/ParticleCanvas.cpp.obj CMakeFiles/ffass.dir/app/source/main.cpp.obj | dependencies/raylib/raylib/libraylib.a || dependencies/raylib/raylib/external/glfw/src/glfw dependencies/raylib/raylib/libraylib.a
   FLAGS = -g
   LINK_LIBRARIES = dependencies/raylib/raylib/libraylib.a  -lopengl32  -lglu32  -lwinmm  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\ffass.dir
-  POST_BUILD = cd .
+  POST_BUILD = C:\Windows\system32\cmd.exe /C "cd /D C:\code\ffass\build && "C:\Program Files\CMake\bin\cmake.exe" -E copy_directory C:/code/ffass/app/assets C:/code/ffass/build/app/assets"
   PRE_LINK = cd .
-  TARGET_FILE = C:\code\ffass\ffass.exe
+  TARGET_FILE = app\ffass.exe
   TARGET_IMPLIB = libffass.dll.a
   TARGET_PDB = ffass.exe.dbg
 
@@ -856,9 +864,9 @@ build dependencies/raylib/raylib/external/glfw/src/CMakeFiles/update_mappings | 
 # =============================================================================
 # Target aliases.
 
-build ffass: phony C$:/code/ffass/ffass.exe
+build ffass: phony app/ffass.exe
 
-build ffass.exe: phony C$:/code/ffass/ffass.exe
+build ffass.exe: phony app/ffass.exe
 
 build glfw: phony dependencies/raylib/raylib/external/glfw/src/glfw
 
@@ -878,7 +886,7 @@ build update_mappings: phony dependencies/raylib/raylib/external/glfw/src/update
 #############################################
 # Folder: C:/code/ffass/build
 
-build all: phony C$:/code/ffass/ffass.exe dependencies/raylib/all
+build all: phony app/ffass.exe dependencies/raylib/all
 
 # =============================================================================
 

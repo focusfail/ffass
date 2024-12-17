@@ -3,8 +3,9 @@
 
 #include "raylib.h"
 
-#include "Particle.h"
+#include "core/Particle.h"
 
+namespace ffass {
 struct ParticleCanvas;
 
 class Brush
@@ -17,5 +18,5 @@ public:
 private:
     ParticleCanvas* canvas_ = nullptr;
 };
-
+};
 #endif // __BRUSH_H__

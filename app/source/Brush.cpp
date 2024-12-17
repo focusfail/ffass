@@ -2,7 +2,9 @@
 
 #include "raymath.h"
 
-#include "ParticleCanvas.h"
+#include "core/ParticleCanvas.h"
+
+namespace ffass {
 
 Brush::Brush(ParticleCanvas& canvas)
     : canvas_(&canvas)
@@ -28,4 +30,5 @@ void Brush::line(Vector2 start, Vector2 end, Particle::ParticleType type, int th
             canvas_->setParticle(index, type);
         }
     }
+}
 }

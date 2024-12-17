@@ -4,9 +4,8 @@
 #include <cstdint>
 #include "raylib.h"
 
+namespace ffass {
 struct Particle {
-    static const int Size = 4;
-
     enum ParticleType : uint8_t { AIR, SAND, STONE, WATER };
 
     ParticleType type = AIR;
@@ -42,5 +41,5 @@ struct Particle {
         return this->type == other;
     }
 };
-
+};
 #endif // __PARTICLE_H__

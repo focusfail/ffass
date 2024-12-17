@@ -14,6 +14,13 @@ target_sources(ffass PRIVATE ${SRC})
 target_include_directories(ffass PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/app/include")
 target_link_libraries(ffass PRIVATE raylib)
 set_target_properties(ffass PROPERTIES
-    RUNTIME_OUTPUT_DIRECTORY_DEBUG "${CMAKE_CURRENT_SOURCE_DIR}/"
-    RUNTIME_OUTPUT_DIRECTORY_RELEASE "${CMAKE_CURRENT_SOURCE_DIR}/"
+    RUNTIME_OUTPUT_DIRECTORY_DEBUG "${CMAKE_CURRENT_SOURCE_DIR}/build/app"
+    RUNTIME_OUTPUT_DIRECTORY_RELEASE "${CMAKE_CURRENT_SOURCE_DIR}/build/app"
+)
+
+# Copy the assets directory to the output
+add_custom_command(TARGET ffass POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_directory
+        "${CMAKE_CURRENT_SOURCE_DIR}/app/assets"
+        "$<TARGET_FILE_DIR:ffass>/assets"
 )

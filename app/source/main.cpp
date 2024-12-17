@@ -7,21 +7,23 @@
 #include "raylib.h"
 #include "raymath.h"
 
-#include "ParticleCanvas.h"
+#include "core/ParticleCanvas.h"
 #include "Brush.h"
+
+using ffass::Particle;
 
 int main(int argc, char const* argv[])
 {
     std::cout << "Hello, World!";
 
-    SetConfigFlags(FLAG_WINDOW_RESIZABLE);
+    SetConfigFlags(FLAG_WINDOW_RESIZABLE | FLAG_WINDOW_ALWAYS_RUN);
     InitWindow(800, 600, "focusfail's advanced sand simulator");
-    SetWindowIcon(LoadImage("./app/assets/ffass.png"));
+    SetWindowIcon(LoadImage("./assets/ffass.png"));
 
-    ParticleCanvas canvas;
-    canvas.setInterval(1 / 1000.0f);
+    ffass::ParticleCanvas canvas;
+    canvas.init(10, 1 / 100.0f);
 
-    Brush brush(canvas);
+    ffass::Brush brush(canvas);
 
     float updateTO = 0.0;
     bool paused = false;

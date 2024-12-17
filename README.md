@@ -1,6 +1,8 @@
 # focusfail's advanced sand simulator (ffass)
 
-ffass is pronounced as the german word "Fass" (/fas/).
+A "high performance" and "advanced" particle simulator.
+
+*ffass is pronounced as the german word "Fass" (/fas/).*
 
 ## features
 

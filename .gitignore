@@ -62,4 +62,4 @@ CMakeUserPresets.json
 *.vsix
 
 # Game
-./*.exe
+build/
