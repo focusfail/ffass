@@ -57,7 +57,11 @@
         "xtree": "cpp",
         "*.m": "cpp",
         "unordered_map": "cpp",
-        "map": "cpp"
+        "map": "cpp",
+        "array": "cpp",
+        "deque": "cpp",
+        "string_view": "cpp",
+        "span": "cpp"
     },
     "cSpell.words": [
         "ffass",
